@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4pu7K4GFkuZz/qNKq22obQmNh+qYP4bVZY/63xBmgr9Vk4CcYXiyZoTllCgiXptIvNGk34p9p2Zw/Ld3oVniNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gavizi\\source\\repos\\MemeGame\\MemeGame\\MemeGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
