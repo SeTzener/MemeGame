@@ -1,0 +1,9 @@
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\bin\Debug\netstandard2.0\MemeGame.deps.json
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\bin\Debug\netstandard2.0\MemeGame.dll
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\bin\Debug\netstandard2.0\MemeGame.pdb
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.AssemblyInfoInputs.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.AssemblyInfo.cs
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.csproj.CoreCompileInputs.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.dll
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.0\MemeGame.pdb

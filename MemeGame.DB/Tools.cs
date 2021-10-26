@@ -33,7 +33,7 @@ namespace MemeGame.DB
             try
             {
 
-            PutBucketRequest requesttest = new PutBucketRequest();
+                PutBucketRequest requesttest = new PutBucketRequest();
                 requesttest.BucketName = "new-bucket";
                 requesttest.UseClientRegion = true;
 
