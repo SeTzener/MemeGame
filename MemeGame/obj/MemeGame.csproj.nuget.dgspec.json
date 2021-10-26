@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj": {}
+    "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj": {
+    "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj",
+        "projectUniqueName": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj",
         "projectName": "MemeGame",
-        "projectPath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj",
+        "projectPath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame\\MemeGame.csproj",
         "packagesPath": "C:\\Users\\Gavizi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame\\obj\\",
+        "outputPath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programmi\\SDK e Componenti\\NuGetPackages",
@@ -63,7 +63,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeGame", "MemeGame\MemeGame.csproj", "{C66A1561-E637-4EB0-AA0D-CE1C1B3C6718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeGame", "MemeGame\MemeGame.csproj", "{C66A1561-E637-4EB0-AA0D-CE1C1B3C6718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeGame.DB", "MemeGame.DB\MemeGame.DB.csproj", "{D2DCE211-9745-417A-96AA-66EB91DD6D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeGame.DB.Test", "MemeGame.DB.Test\MemeGame.DB.Test.csproj", "{D0EDC8E0-BD4E-4035-A18F-DB8703EA8E20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C66A1561-E637-4EB0-AA0D-CE1C1B3C6718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66A1561-E637-4EB0-AA0D-CE1C1B3C6718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C66A1561-E637-4EB0-AA0D-CE1C1B3C6718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2DCE211-9745-417A-96AA-66EB91DD6D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DCE211-9745-417A-96AA-66EB91DD6D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DCE211-9745-417A-96AA-66EB91DD6D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DCE211-9745-417A-96AA-66EB91DD6D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EDC8E0-BD4E-4035-A18F-DB8703EA8E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EDC8E0-BD4E-4035-A18F-DB8703EA8E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EDC8E0-BD4E-4035-A18F-DB8703EA8E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EDC8E0-BD4E-4035-A18F-DB8703EA8E20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
