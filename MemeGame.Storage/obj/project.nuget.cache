@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "daNK3PEwiY2V18vFW3paO1Z+o2F2lynVxO3Buqy5X/YgUxXPjVo/tcmwcVhyle0Vl1uW/4/CnW4Ykqy5DnwVqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

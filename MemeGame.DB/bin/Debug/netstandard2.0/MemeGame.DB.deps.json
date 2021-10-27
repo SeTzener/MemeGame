@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MemeGame.DB/1.0.0": {
         "dependencies": {
-          "AWSSDK.S3": "3.7.3.18",
+          "MemeGame.Storage": "1.0.0",
           "MongoDB.Driver": "2.13.2",
           "NETStandard.Library": "2.0.3"
         },
@@ -17,25 +17,25 @@
           "MemeGame.DB.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.3.25": {
+      "AWSSDK.Core/3.7.3.26": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.3.25"
+            "fileVersion": "3.7.3.26"
           }
         }
       },
-      "AWSSDK.S3/3.7.3.18": {
+      "AWSSDK.S3/3.7.3.19": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.3.25"
+          "AWSSDK.Core": "3.7.3.26"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.3.18"
+            "fileVersion": "3.7.3.19"
           }
         }
       },
@@ -162,6 +162,14 @@
             "fileVersion": "4.6.27129.4"
           }
         }
+      },
+      "MemeGame.Storage/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.3.19"
+        },
+        "runtime": {
+          "MemeGame.Storage.dll": {}
+        }
       }
     }
   },
@@ -171,19 +179,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWSSDK.Core/3.7.3.25": {
+    "AWSSDK.Core/3.7.3.26": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-J4vdEL/SziD6ycaOANysn8REGZ+MlXyl3nfL0NwKa6XcIBbQu246o4oMZQHX0Hhh11eSzhuKiZic5hdoELUVIw==",
-      "path": "awssdk.core/3.7.3.25",
-      "hashPath": "awssdk.core.3.7.3.25.nupkg.sha512"
+      "sha512": "sha512-qaA6CLNM/Ey8Ih7qyTpHqYpQBqfOeL+Ut/G+Z4oIQNWy5T15b7SiY6rdOJgtSUOcKeIrArqc293C5OqxZNrZOA==",
+      "path": "awssdk.core/3.7.3.26",
+      "hashPath": "awssdk.core.3.7.3.26.nupkg.sha512"
     },
-    "AWSSDK.S3/3.7.3.18": {
+    "AWSSDK.S3/3.7.3.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mXZpBAVxhMpSOj9tJHBckqwRvOwPTVsao7byuSK388QeT7KqRRtkYbl70TEoZKRqvll47FfUZbBean2HpKK0Gw==",
-      "path": "awssdk.s3/3.7.3.18",
-      "hashPath": "awssdk.s3.3.7.3.18.nupkg.sha512"
+      "sha512": "sha512-5/svYVqVHd1Ne17cm11Jtbbz+wEzcGTPlxUWTkwdTwCM57aQGy3WihbC10t5ate+34sW69EHs/ffZ1qkL3gcJw==",
+      "path": "awssdk.s3/3.7.3.19",
+      "hashPath": "awssdk.s3.3.7.3.19.nupkg.sha512"
     },
     "DnsClient/1.4.0": {
       "type": "package",
@@ -275,6 +283,11 @@
       "sha512": "sha512-BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
       "path": "system.threading.tasks.extensions/4.5.2",
       "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    },
+    "MemeGame.Storage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

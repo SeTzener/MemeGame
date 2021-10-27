@@ -1,4 +1,5 @@
 ﻿using MemeGame.DB.DTO;
+using MemeGame.Storage;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
@@ -10,16 +11,20 @@ namespace MemeGame.DB
     {
         string dbName = "";
         MongoClient client;
-        Tools tools;
+        AwsS3 _storage;
+
         public DbOperations(bool isTest=false)
         {
             if (isTest)
             {
                 dbName = "MemeGameTest";
-                tools = new Tools(true);
+                _storage = new AwsS3(true);
             }
             else
+            {
                 dbName = "MemeGame";
+                _storage = new AwsS3();
+            }
 
             client = new MongoClient(Properties.Resources.MongoDB);
 
@@ -34,7 +39,7 @@ namespace MemeGame.DB
         {
             try
             {
-                tools.RelocateImage();
+                _storage.GetS3ObjectToConserve();
                 client.GetDatabase(dbName).GetCollection<BsonDocument>("Cards").InsertOne(card.ToBsonDocument());
 
                 // TODO: Spostare il file su AWS da "DaCaricare\" alla cartella di destinazione.

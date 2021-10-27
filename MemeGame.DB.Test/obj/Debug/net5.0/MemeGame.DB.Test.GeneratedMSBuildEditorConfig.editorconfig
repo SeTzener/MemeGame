@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MemeGame.DB.Test
-build_property.ProjectDir = C:\Users\Gavizi\source\repos\SeTzener\MemeGame\MemeGame.DB.Test\
+build_property.ProjectDir = C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB.Test\

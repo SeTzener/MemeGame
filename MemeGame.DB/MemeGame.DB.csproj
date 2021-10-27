@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.S3" Version="3.7.3.18" />
     <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MemeGame.Storage\MemeGame.Storage.csproj" />
   </ItemGroup>
 
   <ItemGroup>

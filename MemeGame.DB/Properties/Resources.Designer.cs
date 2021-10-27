@@ -61,24 +61,6 @@ namespace MemeGame.DB.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AKIAQNFHY7IXKFBCQ2FU.
-        /// </summary>
-        internal static string AwsAccess {
-            get {
-                return ResourceManager.GetString("AwsAccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to oumUSxqDHgb11zLpQelvRbb53EDvLQfHlRbFvCZj.
-        /// </summary>
-        internal static string AwsSecret {
-            get {
-                return ResourceManager.GetString("AwsSecret", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to mongodb+srv://Tano:DLCw57Tv9C8sPQWg@cluster0.ea1ss.mongodb.net/MemeGame?retryWrites=true&amp;amp;w=majority.
         /// </summary>
         internal static string MongoDB {

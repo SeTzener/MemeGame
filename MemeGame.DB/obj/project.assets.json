@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "AWSSDK.Core/3.7.3.25": {
+      "AWSSDK.Core/3.7.3.26": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
@@ -14,10 +14,10 @@
           "lib/netstandard2.0/AWSSDK.Core.dll": {}
         }
       },
-      "AWSSDK.S3/3.7.3.18": {
+      "AWSSDK.S3/3.7.3.19": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.3.25, 4.0.0)"
+          "AWSSDK.Core": "[3.7.3.26, 4.0.0)"
         },
         "compile": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {}
@@ -232,19 +232,32 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
+      },
+      "MemeGame.Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "AWSSDK.S3": "3.7.3.19"
+        },
+        "compile": {
+          "bin/placeholder/MemeGame.Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MemeGame.Storage.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.3.25": {
-      "sha512": "J4vdEL/SziD6ycaOANysn8REGZ+MlXyl3nfL0NwKa6XcIBbQu246o4oMZQHX0Hhh11eSzhuKiZic5hdoELUVIw==",
+    "AWSSDK.Core/3.7.3.26": {
+      "sha512": "qaA6CLNM/Ey8Ih7qyTpHqYpQBqfOeL+Ut/G+Z4oIQNWy5T15b7SiY6rdOJgtSUOcKeIrArqc293C5OqxZNrZOA==",
       "type": "package",
-      "path": "awssdk.core/3.7.3.25",
+      "path": "awssdk.core/3.7.3.26",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.3.25.nupkg.sha512",
+        "awssdk.core.3.7.3.26.nupkg.sha512",
         "awssdk.core.nuspec",
         "lib/net35/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.pdb",
@@ -261,16 +274,16 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.S3/3.7.3.18": {
-      "sha512": "mXZpBAVxhMpSOj9tJHBckqwRvOwPTVsao7byuSK388QeT7KqRRtkYbl70TEoZKRqvll47FfUZbBean2HpKK0Gw==",
+    "AWSSDK.S3/3.7.3.19": {
+      "sha512": "5/svYVqVHd1Ne17cm11Jtbbz+wEzcGTPlxUWTkwdTwCM57aQGy3WihbC10t5ate+34sW69EHs/ffZ1qkL3gcJw==",
       "type": "package",
-      "path": "awssdk.s3/3.7.3.18",
+      "path": "awssdk.s3/3.7.3.19",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
-        "awssdk.s3.3.7.3.18.nupkg.sha512",
+        "awssdk.s3.3.7.3.19.nupkg.sha512",
         "awssdk.s3.nuspec",
         "lib/net35/AWSSDK.S3.dll",
         "lib/net35/AWSSDK.S3.pdb",
@@ -744,11 +757,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "MemeGame.Storage/1.0.0": {
+      "type": "project",
+      "path": "../MemeGame.Storage/MemeGame.Storage.csproj",
+      "msbuildProject": "../MemeGame.Storage/MemeGame.Storage.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "AWSSDK.S3 >= 3.7.3.18",
+      "MemeGame.Storage >= 1.0.0",
       "MongoDB.Driver >= 2.13.2",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -787,7 +805,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj": {
+              "projectPath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -800,10 +822,6 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
-          "AWSSDK.S3": {
-            "target": "Package",
-            "version": "[3.7.3.18, )"
-          },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.13.2, )"

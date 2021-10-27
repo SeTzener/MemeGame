@@ -8,8 +8,7 @@ namespace MemeGame.DB.Test
         [TestMethod]
         public void AddCard()
         {
-            Tools tools = new Tools(true);
-            tools.RelocateImage();
+            
         }
     }
 }

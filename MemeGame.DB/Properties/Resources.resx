@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AwsAccess" xml:space="preserve">
-    <value>AKIAQNFHY7IXKFBCQ2FU</value>
-  </data>
-  <data name="AwsSecret" xml:space="preserve">
-    <value>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</value>
-  </data>
   <data name="MongoDB" xml:space="preserve">
     <value>mongodb+srv://Tano:DLCw57Tv9C8sPQWg@cluster0.ea1ss.mongodb.net/MemeGame?retryWrites=true&amp;amp;w=majority</value>
   </data>
