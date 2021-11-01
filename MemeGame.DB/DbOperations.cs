@@ -39,7 +39,7 @@ namespace MemeGame.DB
         {
             try
             {
-                _storage.GetS3ObjectToConserve();
+                _storage.GetS3ObjectToStore();
                 client.GetDatabase(dbName).GetCollection<BsonDocument>("Cards").InsertOne(card.ToBsonDocument());
 
                 // TODO: Spostare il file su AWS da "DaCaricare\" alla cartella di destinazione.

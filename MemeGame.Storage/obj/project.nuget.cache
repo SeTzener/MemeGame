@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "daNK3PEwiY2V18vFW3paO1Z+o2F2lynVxO3Buqy5X/YgUxXPjVo/tcmwcVhyle0Vl1uW/4/CnW4Ykqy5DnwVqQ==",
+  "dgSpecHash": "hxFWwGuhr82RElUwQpsUi2a425aD4wfrgrfV+hw5bGG8nb92Xtsix8uz7dT6QRXIhLq4i+Ffdl3sS1dAqdlGmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
+  "projectFilePath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",

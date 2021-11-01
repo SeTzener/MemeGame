@@ -159,14 +159,14 @@
         }
       }
     },
-    "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj": {
+    "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
+        "projectUniqueName": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
         "projectName": "MemeGame.Storage",
-        "projectPath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
+        "projectPath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
         "packagesPath": "C:\\Users\\Gavizi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gavizi\\source\\repos\\SeTzener\\MemeGame\\MemeGame.Storage\\obj\\",
+        "outputPath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programmi\\SDK e Componenti\\NuGetPackages",

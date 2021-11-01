@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeGame.DB", "MemeGame.DB\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeGame.DB.Test", "MemeGame.DB.Test\MemeGame.DB.Test.csproj", "{43B89396-E2B3-41A0-B4E4-5FDE9A5C95A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeGame.Storage", "MemeGame.Storage\MemeGame.Storage.csproj", "{5256EBDC-EFB7-4A04-BE78-C50E38AB29CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeGame.Storage", "MemeGame.Storage\MemeGame.Storage.csproj", "{5256EBDC-EFB7-4A04-BE78-C50E38AB29CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeGame.Storage.Test", "MemeGame.Storage.Test\MemeGame.Storage.Test.csproj", "{2C3ECA46-C39E-4F3D-9590-689E16C4B8D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5256EBDC-EFB7-4A04-BE78-C50E38AB29CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5256EBDC-EFB7-4A04-BE78-C50E38AB29CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5256EBDC-EFB7-4A04-BE78-C50E38AB29CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3ECA46-C39E-4F3D-9590-689E16C4B8D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3ECA46-C39E-4F3D-9590-689E16C4B8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3ECA46-C39E-4F3D-9590-689E16C4B8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3ECA46-C39E-4F3D-9590-689E16C4B8D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

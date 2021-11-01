@@ -12,12 +12,10 @@ namespace MemeGame.Storage
         private static AmazonS3Client _s3Client;
         public AwsS3(bool isTest = false)
         {
-            string bucket = "";
-
             if (isTest)
-                bucket = "gavizimemegametest";
+                this._bucket = "gavizimemegametest";
             else
-                bucket = "gavizimemegame";
+                this._bucket = "gavizimemegame";
             AmazonS3Config config = new AmazonS3Config();
 
 
@@ -26,16 +24,19 @@ namespace MemeGame.Storage
             _s3Client = new AmazonS3Client(Properties.Resources.AwsAccess, Properties.Resources.AwsSecret, config);
 
         }
-        public S3Object GetS3ObjectToConserve()
+        private string _bucket { get; set; }
+
+        public S3Object GetS3ObjectToStore()
         {
             S3Object s3Obj = new S3Object();
             try
             {
                 ListObjectsRequest request = new ListObjectsRequest();
-                request.BucketName = "gavizimemegametest";
+                request.BucketName = _bucket;
                 s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => !x.Key.EndsWith("/")).FirstOrDefault();
-                using (GetObjectResponse response = _s3Client.GetObjectAsync("", "").GetAwaiter().GetResult())
+                using (GetObjectResponse response = _s3Client.GetObjectAsync(_bucket + "/DaCaricare", "MemeTestImage.jpeg").GetAwaiter().GetResult())
                 {
+                    response.WriteResponseStreamToFileAsync(@"C:\Users\Gavizi\Desktop\Scrivania\MemeGame\prova2.jpeg", true, new System.Threading.CancellationToken());
                     // byte[] s = response.ResponseStream.ReadByte();
 
                 }
