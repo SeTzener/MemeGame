@@ -1,0 +1,15 @@
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\bin\Debug\netstandard2.1\MemeGame.DB.deps.json
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\bin\Debug\netstandard2.1\MemeGame.DB.dll
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\bin\Debug\netstandard2.1\MemeGame.DB.pdb
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\bin\Debug\netstandard2.1\MemeGame.Storage.dll
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\bin\Debug\netstandard2.1\MemeGame.Storage.pdb
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.csproj.AssemblyReference.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.Properties.Resources.resources
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.csproj.GenerateResource.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.AssemblyInfoInputs.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.AssemblyInfo.cs
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.csproj.CoreCompileInputs.cache
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.dll
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.pdb
+C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.DB\obj\Debug\netstandard2.1\MemeGame.DB.csproj.CopyComplete

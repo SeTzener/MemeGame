@@ -25,32 +25,70 @@ namespace MemeGame.Storage
 
         }
         private string _bucket { get; set; }
+        private string _keySource { get; set; }
 
-        public S3Object GetS3ObjectToStore()
+
+        public S3Object GetS3ObjectInfo()
         {
             S3Object s3Obj = new S3Object();
+
             try
             {
                 ListObjectsRequest request = new ListObjectsRequest();
                 request.BucketName = _bucket;
                 s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => !x.Key.EndsWith("/")).FirstOrDefault();
-                using (GetObjectResponse response = _s3Client.GetObjectAsync(_bucket + "/DaCaricare", "MemeTestImage.jpeg").GetAwaiter().GetResult())
-                {
-                    response.WriteResponseStreamToFileAsync(@"C:\Users\Gavizi\Desktop\Scrivania\MemeGame\prova2.jpeg", true, new System.Threading.CancellationToken());
-                    // byte[] s = response.ResponseStream.ReadByte();
 
-                }
                 if (s3Obj != null)
-                {
                     return s3Obj;
-                }
             }
             catch (Exception ex)
             {
-                // TODO: gestire l'eccezione loggando da qualche parte e restituendo null
+                // TODO: gestire l'eccezione loggando da qualche parte
             }
 
             return null;
+        }
+
+        public string SelectDestinationBucket(string key)
+        {
+            switch (key)
+            {
+                case "DaCaricare/":
+                    this._keySource = key;
+                    return "Meme/";
+
+                default:
+                    return "Meme/";
+            }
+        }
+
+        public async Task<bool> MovetoConserved(string bucket, string keyTo)
+        {
+            try
+            {
+
+                CopyObjectRequest requestCopy = new CopyObjectRequest
+                {
+                    SourceBucket = bucket,
+                    SourceKey = _keySource,
+                    DestinationBucket = bucket,
+                    DestinationKey = keyTo
+                };
+                _s3Client.CopyObjectAsync(requestCopy).Wait();
+
+                var requestDelete = new DeleteObjectRequest
+                {
+                    BucketName = bucket,
+                    Key = _keySource
+                };
+                await _s3Client.DeleteObjectAsync(requestDelete);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Something went wrong into the copy/Delete file to Conserved.{Environment.NewLine}{ex.Message}");
+            }
         }
 
         public async Task ListingObjectsAsync(string bucketName)
@@ -89,30 +127,22 @@ namespace MemeGame.Storage
             }
         }
 
-        public void DaAssegnare()
+        public byte[] GetS3Image(string s3Key)
         {
-
-            //GetObjectResponse response = _s3Client.GetObjectAsync(request);
-            //using (Stream responseStream = response.ResponseStream)
-            //{
-            //    var bytes = ReadStream(responseStream);
-            //    var download = new FileContentResult(bytes, "application/pdf");
-            //    download.FileDownloadName = filename;
-            //    return download;
-            //}
-        }
-        public static byte[] ReadStream(Stream responseStream)
-        {
-            byte[] buffer = new byte[16 * 1024];
-            using (MemoryStream ms = new MemoryStream())
+            try
             {
-                int read;
-                while ((read = responseStream.Read(buffer, 0, buffer.Length)) > 0)
+                using (GetObjectResponse response = _s3Client.GetObjectAsync(_bucket, s3Key).GetAwaiter().GetResult())
                 {
-                    ms.Write(buffer, 0, read);
+                    // response.WriteResponseStreamToFileAsync(@"C:\Users\Gavizi\Desktop\Scrivania\MemeGame\prova2.jpeg", true, new System.Threading.CancellationToken());
+                    return Tools.ReadStream(response.ResponseStream);
                 }
-                return ms.ToArray();
             }
+            catch (Exception ex)
+            {
+                // TODO: gestire l'eccezione loggando da qualche parte 
+            }
+
+            return null;
         }
     }
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "hxFWwGuhr82RElUwQpsUi2a425aD4wfrgrfV+hw5bGG8nb92Xtsix8uz7dT6QRXIhLq4i+Ffdl3sS1dAqdlGmQ==",
+  "dgSpecHash": "OZXQoAxe7FROGptM8mSyvOk9ZyRpFRuBnxz+cp4+4J3AiPLtBbPfgyNCKO/+Lz6as4IJOYCeMD6i1e/RswUDtQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage\\MemeGame.Storage.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.31\\awssdk.core.3.7.3.31.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.24\\awssdk.s3.3.7.3.24.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

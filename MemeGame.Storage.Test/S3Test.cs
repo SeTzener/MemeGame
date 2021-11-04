@@ -1,4 +1,5 @@
 using Amazon.S3;
+using Amazon.S3.Model;
 using NUnit.Framework;
 
 namespace MemeGame.Storage.Test
@@ -8,15 +9,31 @@ namespace MemeGame.Storage.Test
         [SetUp]
         public void Setup()
         {
+            aws = new AwsS3(true);
+        }
+
+        AwsS3 aws;
+
+        [Test]
+        public void RetrievingAnItemToStore()
+        {
+
+            S3Object s3Obj = aws.GetS3ObjectInfo();
+
+            Assert.IsNotNull(s3Obj);
+            Assert.IsTrue(s3Obj.BucketName == "gavizimemegametest");
+            Assert.IsTrue(s3Obj.Key == "DaCaricare/MemeTestImage.jpeg");
         }
 
         [Test]
-        public void Test1()
+        public void GetS3ImageBytes()
         {
-            AwsS3 aws = new AwsS3(true);
+            string s3Key = "DaCaricare/MemeTestImage.jpeg";
 
-            var s3Obj = aws.GetS3ObjectToStore();
-            Assert.Pass();
+            byte[] image = aws.GetS3Image(s3Key);
+
+            Assert.IsNotNull(image);
+            Assert.IsTrue(image.Length == 52011);
         }
     }
 }

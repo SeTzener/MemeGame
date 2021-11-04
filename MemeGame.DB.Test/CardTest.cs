@@ -8,7 +8,9 @@ namespace MemeGame.DB.Test
         [TestMethod]
         public void AddCard()
         {
-            
+            DbOperations db = new DbOperations(true);
+
+            Assert.IsTrue(db.CreateCard());
         }
     }
 }

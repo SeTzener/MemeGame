@@ -61,7 +61,7 @@ namespace MemeGame.DB.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to mongodb+srv://Tano:DLCw57Tv9C8sPQWg@cluster0.ea1ss.mongodb.net/MemeGame?retryWrites=true&amp;amp;w=majority.
+        ///   Looks up a localized string similar to mongodb+srv://Tano:DLCw57Tv9C8sPQWg@cluster0.ea1ss.mongodb.net/{0}?retryWrites=true&amp;w=majority.
         /// </summary>
         internal static string MongoDB {
             get {
