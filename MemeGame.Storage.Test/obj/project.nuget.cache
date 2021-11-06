@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/TwG9Glaj/24umo/zhikfhYSC4v5xa7+SLpPlFA4u63Hw5iVFMfup+xycm7sLwLdDs/4jSrO20t4rcN+TREC4w==",
+  "dgSpecHash": "ipCrFUr86RipDjVNQtjAJe0ik/XYJaQKmsCxCm6AxiFHlZaGkknmeqoNPIvNvDuKdVS2BnjPmY2glWn9eXe3+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.Storage.Test\\MemeGame.Storage.Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.31\\awssdk.core.3.7.3.31.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.24\\awssdk.s3.3.7.3.24.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qH3duU7vwQXDHC3M5hZPiq81gq9FvuX0y/JW11EMzBGjcpf1sU4P8Yz9FlSUoKL068yno6J5b+I8Y4dwzWQt/A==",
+  "dgSpecHash": "gBl/+2pp0WLoPCQuQ/ZEMQdikt/05OgX6yOgX6kmwKRj4z9xwMbpHcyslgr2ZaONPT2FlnqU1dFHxqy3Wdsopg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.DB\\MemeGame.DB.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.31\\awssdk.core.3.7.3.31.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.24\\awssdk.s3.3.7.3.24.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\mongodb.bson\\2.13.2\\mongodb.bson.2.13.2.nupkg.sha512",

@@ -77,5 +77,32 @@ namespace MemeGame.Storage.Properties {
                 return ResourceManager.GetString("AwsSecret", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meme/.
+        /// </summary>
+        internal static string StoredImagesFolder {
+            get {
+                return ResourceManager.GetString("StoredImagesFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Questions/.
+        /// </summary>
+        internal static string StoredQuestionsFolder {
+            get {
+                return ResourceManager.GetString("StoredQuestionsFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToStore/.
+        /// </summary>
+        internal static string ToStoreFolder {
+            get {
+                return ResourceManager.GetString("ToStoreFolder", resourceCulture);
+            }
+        }
     }
 }

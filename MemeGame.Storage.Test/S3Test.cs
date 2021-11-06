@@ -22,18 +22,29 @@ namespace MemeGame.Storage.Test
 
             Assert.IsNotNull(s3Obj);
             Assert.IsTrue(s3Obj.BucketName == "gavizimemegametest");
-            Assert.IsTrue(s3Obj.Key == "DaCaricare/MemeTestImage.jpeg");
+            Assert.IsTrue(s3Obj.Key == "ToStore/MemeTestImage.jpeg");
         }
 
         [Test]
         public void GetS3ImageBytes()
         {
-            string s3Key = "DaCaricare/MemeTestImage.jpeg";
+            string s3Key = "ToStore/MemeTestImage.jpeg";
 
             byte[] image = aws.GetS3Image(s3Key);
 
             Assert.IsNotNull(image);
             Assert.IsTrue(image.Length == 52011);
+        }
+
+        [Test]
+        public void CrudS3Test()
+        {
+            string bucketName = "gavizimemegametest";
+            string keySource = "ToStore/";
+            string KeyTo = "Meme/";
+            string fileName = "MemeTestImage.jpeg";
+
+            //aws.
         }
     }
 }

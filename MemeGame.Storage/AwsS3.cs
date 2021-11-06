@@ -1,5 +1,7 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
+using MemeGame.Storage.Entities;
+using MemeGame.Storage.Properties;
 using System;
 using System.IO;
 using System.Linq;
@@ -12,21 +14,26 @@ namespace MemeGame.Storage
         private static AmazonS3Client _s3Client;
         public AwsS3(bool isTest = false)
         {
-            if (isTest)
-                this._bucket = "gavizimemegametest";
+            this._IsTest = isTest;
+
+            if (this._IsTest)
+                this.Bucket = "gavizimemegametest";
             else
-                this._bucket = "gavizimemegame";
+                this.Bucket = "gavizimemegame";
+
             AmazonS3Config config = new AmazonS3Config();
 
-
             config.ServiceURL = $"https://s3.eu-central-1.amazonaws.com";
+            _s3Client = new AmazonS3Client(Resources.AwsAccess, Resources.AwsSecret, config);
 
-            _s3Client = new AmazonS3Client(Properties.Resources.AwsAccess, Properties.Resources.AwsSecret, config);
-
+            this.Folders = new StorageDisposition();
+            this.Folders.ToStore = Resources.ToStoreFolder;
+            this.Folders.StoredImages = Resources.StoredImagesFolder;
+            this.Folders.StoredQuestions = Resources.StoredQuestionsFolder;
         }
-        private string _bucket { get; set; }
-        private string _keySource { get; set; }
-
+        public string Bucket { get; set; }
+        public StorageDisposition Folders { get; set; }
+        private bool _IsTest { get; set; }
 
         public S3Object GetS3ObjectInfo()
         {
@@ -35,7 +42,8 @@ namespace MemeGame.Storage
             try
             {
                 ListObjectsRequest request = new ListObjectsRequest();
-                request.BucketName = _bucket;
+                request.BucketName = Bucket;
+
                 s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => !x.Key.EndsWith("/")).FirstOrDefault();
 
                 if (s3Obj != null)
@@ -48,47 +56,88 @@ namespace MemeGame.Storage
 
             return null;
         }
-
-        public string SelectDestinationBucket(string key)
+        public S3Object GetS3ObjectInfo(string fileName)
         {
-            switch (key)
-            {
-                case "DaCaricare/":
-                    this._keySource = key;
-                    return "Meme/";
+            S3Object s3Obj = new S3Object();
 
-                default:
-                    return "Meme/";
-            }
-        }
-
-        public async Task<bool> MovetoConserved(string bucket, string keyTo)
-        {
             try
             {
+                ListObjectsRequest request = new ListObjectsRequest();
+                request.BucketName = Bucket;
 
-                CopyObjectRequest requestCopy = new CopyObjectRequest
-                {
-                    SourceBucket = bucket,
-                    SourceKey = _keySource,
-                    DestinationBucket = bucket,
-                    DestinationKey = keyTo
-                };
-                _s3Client.CopyObjectAsync(requestCopy).Wait();
+                s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => x.Key.Contains(fileName)).FirstOrDefault();
 
-                var requestDelete = new DeleteObjectRequest
-                {
-                    BucketName = bucket,
-                    Key = _keySource
-                };
-                await _s3Client.DeleteObjectAsync(requestDelete);
-
-                return true;
+                if (s3Obj != null)
+                    return s3Obj;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Something went wrong into the copy/Delete file to Conserved.{Environment.NewLine}{ex.Message}");
+                // TODO: gestire l'eccezione loggando da qualche parte
             }
+
+            return null;
+        }
+
+        public bool MoveToBucket(string keySource, string keyTo, string fileName)
+        {
+            try
+            {
+                if (CopyFile(keySource, keyTo, fileName))
+                {
+                    if (DeleteFile(keySource, fileName))
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public bool DeleteFile(string keySource, string fileName)
+        {
+            try
+            {
+                var requestDelete = new DeleteObjectRequest
+                {
+                    BucketName = this.Bucket,
+                    Key = keySource + fileName
+                };
+                _s3Client.DeleteObjectAsync(requestDelete).Wait();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"ERR-{DateTime.Now}: Something went wrong in the file delete.{Environment.NewLine}" +
+                                    $"                    Check the method {System.Reflection.MethodBase.GetCurrentMethod().Name}{Environment.NewLine}" +
+                                    $"                    {ex.Message}");
+            }
+            return true;
+        }
+
+        public bool CopyFile(string keySource, string keyTo, string fileName)
+        {
+            try
+            {
+                CopyObjectRequest requestCopy = new CopyObjectRequest
+                {
+                    SourceBucket = this.Bucket,
+                    SourceKey = keySource + fileName,
+                    DestinationBucket = this.Bucket,
+                    DestinationKey = keyTo + fileName
+                };
+                _s3Client.CopyObjectAsync(requestCopy).Wait();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"ERR-{DateTime.Now}: Something went wrong in the file copy.{Environment.NewLine}" +
+                                    $"                    Check the method {System.Reflection.MethodBase.GetCurrentMethod().Name}{Environment.NewLine}" +
+                                    $"                    {ex.Message}");
+            }
+            return true;
         }
 
         public async Task ListingObjectsAsync(string bucketName)
@@ -131,7 +180,7 @@ namespace MemeGame.Storage
         {
             try
             {
-                using (GetObjectResponse response = _s3Client.GetObjectAsync(_bucket, s3Key).GetAwaiter().GetResult())
+                using (GetObjectResponse response = _s3Client.GetObjectAsync(Bucket, s3Key).GetAwaiter().GetResult())
                 {
                     // response.WriteResponseStreamToFileAsync(@"C:\Users\Gavizi\Desktop\Scrivania\MemeGame\prova2.jpeg", true, new System.Threading.CancellationToken());
                     return Tools.ReadStream(response.ResponseStream);

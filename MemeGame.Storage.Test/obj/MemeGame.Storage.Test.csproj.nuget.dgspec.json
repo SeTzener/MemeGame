@@ -130,7 +130,7 @@
           "dependencies": {
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[3.7.3.19, )"
+              "version": "[3.7.3.24, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

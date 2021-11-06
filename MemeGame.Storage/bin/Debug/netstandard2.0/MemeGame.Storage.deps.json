@@ -9,8 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MemeGame.Storage/1.0.0": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.3.31",
-          "AWSSDK.S3": "3.7.3.19",
+          "AWSSDK.S3": "3.7.3.24",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -28,14 +27,14 @@
           }
         }
       },
-      "AWSSDK.S3/3.7.3.19": {
+      "AWSSDK.S3/3.7.3.24": {
         "dependencies": {
           "AWSSDK.Core": "3.7.3.31"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.3.19"
+            "fileVersion": "3.7.3.24"
           }
         }
       },
@@ -90,12 +89,12 @@
       "path": "awssdk.core/3.7.3.31",
       "hashPath": "awssdk.core.3.7.3.31.nupkg.sha512"
     },
-    "AWSSDK.S3/3.7.3.19": {
+    "AWSSDK.S3/3.7.3.24": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5/svYVqVHd1Ne17cm11Jtbbz+wEzcGTPlxUWTkwdTwCM57aQGy3WihbC10t5ate+34sW69EHs/ffZ1qkL3gcJw==",
-      "path": "awssdk.s3/3.7.3.19",
-      "hashPath": "awssdk.s3.3.7.3.19.nupkg.sha512"
+      "sha512": "sha512-6NOj48pU18tbLo5MV1IjtFsTWiKHFRyBgmEg1jdH6D+UmY1c3rrrzhLxSEincsFmOQsMh6VO9161YfFgOABtZA==",
+      "path": "awssdk.s3/3.7.3.24",
+      "hashPath": "awssdk.s3.3.7.3.24.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",

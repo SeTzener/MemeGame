@@ -123,4 +123,13 @@
   <data name="AwsSecret" xml:space="preserve">
     <value>AwsSecretPlaceholder</value>
   </data>
+  <data name="StoredImagesFolder" xml:space="preserve">
+    <value>Meme/</value>
+  </data>
+  <data name="StoredQuestionsFolder" xml:space="preserve">
+    <value>Questions/</value>
+  </data>
+  <data name="ToStoreFolder" xml:space="preserve">
+    <value>ToStore/</value>
+  </data>
 </root>

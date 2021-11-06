@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "AWSSDK.Core/3.7.3.26": {
+      "AWSSDK.Core/3.7.3.31": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
@@ -14,10 +14,10 @@
           "lib/netstandard2.0/AWSSDK.Core.dll": {}
         }
       },
-      "AWSSDK.S3/3.7.3.19": {
+      "AWSSDK.S3/3.7.3.24": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.3.26, 4.0.0)"
+          "AWSSDK.Core": "[3.7.3.31, 4.0.0)"
         },
         "compile": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {}
@@ -210,7 +210,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "AWSSDK.S3": "3.7.3.19"
+          "AWSSDK.S3": "3.7.3.24"
         },
         "compile": {
           "bin/placeholder/MemeGame.Storage.dll": {}
@@ -222,15 +222,15 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.3.26": {
-      "sha512": "qaA6CLNM/Ey8Ih7qyTpHqYpQBqfOeL+Ut/G+Z4oIQNWy5T15b7SiY6rdOJgtSUOcKeIrArqc293C5OqxZNrZOA==",
+    "AWSSDK.Core/3.7.3.31": {
+      "sha512": "PN7l43TFbgQ3vm85ahyy9nliI2wsTwB7CuEU2N3MkYzqvhYXdll5tiX4K97SPfDnOxnqnJK7qCKnoPPH01EfYA==",
       "type": "package",
-      "path": "awssdk.core/3.7.3.26",
+      "path": "awssdk.core/3.7.3.31",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.3.26.nupkg.sha512",
+        "awssdk.core.3.7.3.31.nupkg.sha512",
         "awssdk.core.nuspec",
         "lib/net35/AWSSDK.Core.dll",
         "lib/net35/AWSSDK.Core.pdb",
@@ -247,16 +247,16 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.S3/3.7.3.19": {
-      "sha512": "5/svYVqVHd1Ne17cm11Jtbbz+wEzcGTPlxUWTkwdTwCM57aQGy3WihbC10t5ate+34sW69EHs/ffZ1qkL3gcJw==",
+    "AWSSDK.S3/3.7.3.24": {
+      "sha512": "6NOj48pU18tbLo5MV1IjtFsTWiKHFRyBgmEg1jdH6D+UmY1c3rrrzhLxSEincsFmOQsMh6VO9161YfFgOABtZA==",
       "type": "package",
-      "path": "awssdk.s3/3.7.3.19",
+      "path": "awssdk.s3/3.7.3.24",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
-        "awssdk.s3.3.7.3.19.nupkg.sha512",
+        "awssdk.s3.3.7.3.24.nupkg.sha512",
         "awssdk.s3.nuspec",
         "lib/net35/AWSSDK.S3.dll",
         "lib/net35/AWSSDK.S3.pdb",

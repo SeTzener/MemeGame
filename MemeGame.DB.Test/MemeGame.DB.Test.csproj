@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MemeGame.DB\MemeGame.DB.csproj" />
+    <ProjectReference Include="..\MemeGame.Storage\MemeGame.Storage.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "O0aNuFMd7SgZYuaKSIvAv46I1qwBZfKAqm9rpeFAo+pv74Y3Z/DgOjbzqFfy9ONtkzFWXbpuCEvqKIAdZ46wEw==",
+  "dgSpecHash": "Pcry5bM7BB7iJsMVgC1THq6hN9DIvsMxtCXGFguq5YaMj8vWG8R5IBGVltgiNUQIrlk4jHD5aE/nOi+Dy3meVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gavizi\\Source\\Repos\\SeTzener\\MemeGame\\MemeGame.DB.Test\\MemeGame.DB.Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.26\\awssdk.core.3.7.3.26.nupkg.sha512",
-    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.19\\awssdk.s3.3.7.3.19.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.core\\3.7.3.31\\awssdk.core.3.7.3.31.nupkg.sha512",
+    "C:\\Users\\Gavizi\\.nuget\\packages\\awssdk.s3\\3.7.3.24\\awssdk.s3.3.7.3.24.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\Gavizi\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

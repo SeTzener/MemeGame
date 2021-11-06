@@ -104,17 +104,3 @@ C:\Users\Gavizi\source\repos\SeTzener\MemeGame\MemeGame.Storage.Test\obj\Debug\n
 C:\Users\Gavizi\source\repos\SeTzener\MemeGame\MemeGame.Storage.Test\obj\Debug\net5.0\ref\MemeGame.Storage.Test.dll
 C:\Users\Gavizi\source\repos\SeTzener\MemeGame\MemeGame.Storage.Test\obj\Debug\net5.0\MemeGame.Storage.Test.pdb
 C:\Users\Gavizi\source\repos\SeTzener\MemeGame\MemeGame.Storage.Test\obj\Debug\net5.0\MemeGame.Storage.Test.genruntimeconfig.cache
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\DnsClient.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MongoDB.Bson.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MongoDB.Driver.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MongoDB.Driver.Core.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\SharpCompress.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MemeGame.DB.dll
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame.Storage.Test\bin\Debug\net5.0\MemeGame.DB.pdb
