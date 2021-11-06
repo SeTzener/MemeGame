@@ -208,7 +208,7 @@
       },
       "MemeGame.Storage/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "AWSSDK.S3": "3.7.3.24"
         },

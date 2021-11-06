@@ -44,7 +44,6 @@ namespace MemeGame.Storage.Test
             string KeyTo = "Meme/";
             string fileName = "MemeTestImage.jpeg";
 
-            //aws.
         }
     }
 }
