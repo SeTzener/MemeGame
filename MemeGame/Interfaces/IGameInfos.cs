@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MemeGame.Interfaces
 {
-    public interface IGameInfo
+    public interface IGameInfos
     {
+        int GameId { get; }
     }
 }

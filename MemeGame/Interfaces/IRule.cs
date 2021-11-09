@@ -4,9 +4,7 @@ using System.Text;
 
 namespace MemeGame.Interfaces
 {
-    public interface IGame : IGameInfos
+    public interface IRule
     {
-        List<IRule> Rules { get; }
-        void DoWork();
     }
 }

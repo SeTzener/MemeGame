@@ -4,7 +4,9 @@ using System.Text;
 
 namespace MemeGame.Interfaces
 {
-    public interface IPlayer
+    public interface IPlayer : IPlayerInfos, IPlayerIdentities
     {
+        IHand Hand { get; set; }
+        int Points { get; set; }
     }
 }

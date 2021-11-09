@@ -6,5 +6,9 @@ namespace MemeGame.Interfaces
 {
     public interface IHand
     {
+        List<ICard> Cards { get; set; }
+        ICard DrawCard();
+        ICard PlayCard();
+        ICardInfos Discard();
     }
 }
