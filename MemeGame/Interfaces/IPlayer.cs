@@ -6,7 +6,8 @@ namespace MemeGame.Interfaces
 {
     public interface IPlayer : IPlayerInfos, IPlayerIdentities
     {
-        IHand Hand { get; set; }
-        int Points { get; set; }
+        IHand Hand { get; }
+        int Points { get; }
+        void MakeYourChoice();
     }
 }

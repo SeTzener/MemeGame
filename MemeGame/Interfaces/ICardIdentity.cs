@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MemeGame.Interfaces
 {
-    public interface ICardIdentities
+    public interface ICardIdentity
     {
         ObjectId Id { get; }
     }
