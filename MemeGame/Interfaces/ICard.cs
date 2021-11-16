@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace MemeGame.Interfaces
 {
-    public interface ICard : ICardInfos, ICardIdentity
+    public interface ICard : ICardIdentity
     {
+        ICardInfos Infos { get; }
         byte[] Image { get; }
         string Text { get; }
     }

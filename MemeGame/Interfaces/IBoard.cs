@@ -9,7 +9,7 @@ namespace MemeGame.Interfaces
         List<IPlayer> Players { get; }
         List<ICardIdentity> Deck { get; }
         List<ICardInfos> DiscardPile { get; }
-        IPlayArea PlayArea { get; }
+        IPlayground Playground { get; }
         decimal Timer { get; }
         decimal TimeCount();
     }

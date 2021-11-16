@@ -11,14 +11,25 @@ namespace MemeGame.Entities
     {
         public Card(CardData data)
         {
-
+            this.Id = data._id;
+            this.Text = data.Text;
+            this.Infos = new CardInfos(data);
         }
-        public ObjectId Id => throw new NotImplementedException();
-        public byte[] Image => throw new NotImplementedException();
-        public string Text => throw new NotImplementedException();
-        public bool IsQuestion => throw new NotImplementedException();
-        public string MemeName => throw new NotImplementedException();
-        public decimal ImageSize => throw new NotImplementedException();
 
+        public ICardInfos Infos { get; private set; }
+
+        public byte[] Image { get; private set; }
+
+        public string Text { get; private set; }
+
+        public ObjectId Id { get; private set; }
+
+        private byte[] GetImageFromStorage(string imagePath)
+        {
+
+            // TODO: Implementare la funzionalità per recuperare l'immagine da S3
+            return null;
+        }
+        
     }
 }
