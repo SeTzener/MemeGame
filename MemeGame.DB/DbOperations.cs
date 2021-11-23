@@ -112,7 +112,7 @@ namespace MemeGame.DB
         private Card PopulateNewCard()
         {
             Card card = new Card();
-            var s3Obj = _storage.GetS3ObjectInfo();
+            var s3Obj = _storage.GetS3ObjectInfo("ToStore");
 
             card.BucketName = s3Obj.BucketName;
             card.S3Key = _storage.Folders.StoredImages;

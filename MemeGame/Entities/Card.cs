@@ -24,11 +24,11 @@ namespace MemeGame.Entities
 
         public ObjectId Id { get; private set; }
 
-        private byte[] GetImageFromStorage(string imagePath)
+        private void GetImageFromStorage(string imagePath)
         {
 
             // TODO: Implementare la funzionalità per recuperare l'immagine da S3
-            return null;
+            this.Image = null;
         }
         
     }

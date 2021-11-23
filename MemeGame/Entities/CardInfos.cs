@@ -25,7 +25,7 @@ namespace MemeGame.Entities
 
         private string GetBucketPath(CardData data)
         {
-            return String.Format("{0}/{1}/{2}.{3}", data.BucketName, data.S3Key, data.MemeName, data.Extension);
+            return String.Format("{0}{1}{2}", data.S3Key, data.MemeName, data.Extension);
         }
     }
 }

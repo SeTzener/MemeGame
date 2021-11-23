@@ -7,7 +7,7 @@ namespace MemeGame.Interfaces
     public interface IGame : IGameIdentity
     {
         IBoard Board { get; }
-        List<IRule> Rules { get; }
+        List<IRules> Rules { get; }
         void DoWork();
     }
 }

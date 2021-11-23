@@ -35,15 +35,5 @@ namespace MemeGame.Storage.Test
             Assert.IsNotNull(image);
             Assert.IsTrue(image.Length == 52011);
         }
-
-        [Test]
-        public void CrudS3Test()
-        {
-            string bucketName = "gavizimemegametest";
-            string keySource = "ToStore/";
-            string KeyTo = "Meme/";
-            string fileName = "MemeTestImage.jpeg";
-
-        }
     }
 }

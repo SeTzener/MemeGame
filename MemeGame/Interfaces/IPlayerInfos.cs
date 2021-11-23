@@ -6,7 +6,7 @@ namespace MemeGame.Interfaces
 {
     public interface IPlayerInfos
     {
-        string NickName { get; set; }
+        string NickName { get; }
         bool IsActivePlayer { get; }
         bool IsTurnMaster { get; }
     }

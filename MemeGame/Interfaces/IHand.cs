@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,9 +7,11 @@ namespace MemeGame.Interfaces
 {
     public interface IHand
     {
-        List<ICard> Cards { get; set; }
+        List<ICard> Cards { get; }
+        ICard DrawCard(int n);
         ICard DrawCard();
         ICard PlayCard();
-        ICardInfos Discard();
+        ICardInfos Discard(ObjectId id);
+        ICardInfos Discard(List<ObjectId> ids);
     }
 }

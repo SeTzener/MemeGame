@@ -65,7 +65,7 @@ namespace MemeGame.Storage
                 ListObjectsRequest request = new ListObjectsRequest();
                 request.BucketName = Bucket;
 
-                s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => x.Key.Contains(fileName)).FirstOrDefault();
+                s3Obj = _s3Client.ListObjectsAsync(request).GetAwaiter().GetResult().S3Objects.Where(x => x.Key.Contains(fileName) && !x.Key.EndsWith("/")).FirstOrDefault();
 
                 if (s3Obj != null)
                     return s3Obj;
