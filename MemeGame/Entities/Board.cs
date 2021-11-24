@@ -9,8 +9,12 @@ namespace MemeGame.Entities
 {
     public class Board : IBoard
     {
+        private DbOperations _data { get; set; }
+        private AwsS3 _storage { get; set; }
         public Board(List<IPlayer> players, IRules rules, AwsS3 storage, DbOperations db)
         {
+            _data = db;
+            _storage = storage;
             this.Players = players;
             this.MemeDeck = AssembleDeck(rules.MemeDeck, false);
             this.QuestionDeck = AssembleDeck(rules.QuestionDeck , true);

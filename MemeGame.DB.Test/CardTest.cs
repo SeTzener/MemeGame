@@ -21,8 +21,8 @@ namespace MemeGame.DB.Test
         [TestMethod]
         public void AddCard()
         {
-            Assert.IsTrue(db.CreateCard());
-            Card card = db.FindCard("MemeTestImage");
+            Assert.IsTrue(db.Cards.Create());
+            Card card = db.Cards.Find("MemeTestImage");
             Assert.IsNotNull(card);
             Assert.AreEqual(card.S3Key, "Meme/");
 
@@ -36,8 +36,8 @@ namespace MemeGame.DB.Test
             info = aws.GetS3ObjectInfo("MemeTestImage");
             Assert.AreEqual(info.Key, "ToStore/MemeTestImage.jpeg");
 
-            db.DeleteCard("MemeTestImage");
-            card = db.FindCard("MemeTestImage");
+            db.Cards.Delete("MemeTestImage");
+            card = db.Cards.Find("MemeTestImage");
             Assert.IsNull(card);
         }
     }
