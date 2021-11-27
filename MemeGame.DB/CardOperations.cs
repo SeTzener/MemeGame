@@ -23,6 +23,7 @@ namespace MemeGame.DB
             this._storage = storage;
         }
 
+        #region CRUD
         public bool Create()
         {
             try
@@ -50,6 +51,10 @@ namespace MemeGame.DB
                             cancellationToken);
                     }
                 }
+                else
+                {
+                    return false;
+                }
                 return true;
             }
             catch (Exception ex)
@@ -58,7 +63,22 @@ namespace MemeGame.DB
                 return false;
             }
         }
-
+        public Card Find(string cardName)
+        {
+            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x.MemeName == cardName).FirstOrDefault();
+        }
+        public Card Find(ObjectId id)
+        {
+            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x._id == id).FirstOrDefault();
+        }
+        public Card Update(string name)
+        {
+            throw new NotImplementedException();
+        }
+        public Card Update(ObjectId id)
+        {
+            throw new NotImplementedException();
+        }
         public bool Delete(string name)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("MemeName", name);
@@ -73,22 +93,13 @@ namespace MemeGame.DB
             }
             return true;
         }
-
+        #endregion
 
         public List<Card> GetAllCards()
         {
             return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList();
         }
 
-        public Card Find(string cardName)
-        {
-            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x.MemeName == cardName).FirstOrDefault();
-        }
-
-        public Card Find(ObjectId id)
-        {
-            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x._id == id).FirstOrDefault();
-        }
 
         public bool AddLoreText(ObjectId id, string loreText)
         {
@@ -97,34 +108,38 @@ namespace MemeGame.DB
             return true;
         }
 
-        public List<ObjectId> GetRandomCards()
+        public List<ObjectId> GetRandomCards(bool isQuestion)
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+
+            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x.IsQuestion == isQuestion).Select(x=>x._id).OrderBy(x => rnd.Next()).Take(1).ToList();
+        }
+        public List<ObjectId> GetRandomCards(int num, bool isQuestion)
+        {
+            Random rnd = new Random();
+
+            return _client.GetDatabase(_dbName).GetCollection<Card>("Cards").Find(new BsonDocument()).ToList().Where(x => x.IsQuestion == isQuestion).Select(x=>x._id).OrderBy(x => rnd.Next()).Take(num).ToList();
+           
         }
         private Card PopulateNewCard()
         {
             Card card = new Card();
-            var s3Obj = _storage.GetS3ObjectInfo("ToStore");
-
-            card.BucketName = s3Obj.BucketName;
-            card.S3Key = _storage.Folders.StoredImages;
-            card.ImageSize = Tools.GetKilobyteSize(s3Obj.Size);
-            card.Extension = Path.GetExtension(s3Obj.Key);
-            card.MemeName = s3Obj.Key.Substring(_storage.Folders.ToStore.Length).Replace(card.Extension, "");
-            card.UploadDate = DateTime.Today;
-            card.IsQuestion = false;
-
-            return card;
+            var s3Obj = _storage.GetS3ObjectInfo(_storage.Folders.ToStore);
+            if (s3Obj != null)
+            {
+                card.BucketName = s3Obj.BucketName;
+                card.S3Key = _storage.Folders.StoredImages;
+                card.ImageSize = Tools.GetKilobyteSize(s3Obj.Size);
+                card.Extension = Path.GetExtension(s3Obj.Key);
+                card.MemeName = s3Obj.Key.Substring(_storage.Folders.ToStore.Length).Replace(card.Extension, "");
+                card.UploadDate = DateTime.Today;
+                card.IsQuestion = false;
+                
+                return card;
+            }
+            else
+                return null;
         }
 
-        public Card Update(string name)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Card Update(ObjectId id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -18,7 +18,7 @@ namespace MemeGame.Storage.Test
         public void RetrievingAnItemToStore()
         {
 
-            S3Object s3Obj = aws.GetS3ObjectInfo();
+            S3Object s3Obj = aws.GetS3ObjectInfo("MemeTestImage");
 
             Assert.IsNotNull(s3Obj);
             Assert.IsTrue(s3Obj.BucketName == "gavizimemegametest");

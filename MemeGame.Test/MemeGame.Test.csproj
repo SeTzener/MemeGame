@@ -13,4 +13,10 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MemeGame.DB\MemeGame.DB.csproj" />
+    <ProjectReference Include="..\MemeGame.Storage\MemeGame.Storage.csproj" />
+    <ProjectReference Include="..\MemeGame\MemeGame.csproj" />
+  </ItemGroup>
+
 </Project>

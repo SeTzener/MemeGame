@@ -26,5 +26,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Gavizi\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\Gavizi\.nuget\packages\awssdk.core\3.7.3.31</PkgAWSSDK_Core>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\Gavizi\.nuget\packages\awssdk.s3\3.7.3.24</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>

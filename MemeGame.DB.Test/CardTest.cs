@@ -3,6 +3,7 @@ using MemeGame.DB.DTO;
 using MemeGame.Storage;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -39,6 +40,31 @@ namespace MemeGame.DB.Test
             db.Cards.Delete("MemeTestImage");
             card = db.Cards.Find("MemeTestImage");
             Assert.IsNull(card);
+        }
+        [TestMethod]
+        public void GetRandomCards()
+        {
+            List<ObjectId> deck = db.Cards.GetRandomCards(10, false);
+            Assert.AreEqual(deck.Count, 10);
+            Assert.IsTrue(deck.GroupBy(x => x).Where(g => g.Count() > 1).Select(y => y.Key).ToList().Count == 0);
+
+            deck = db.Cards.GetRandomCards(15, false);
+            Assert.AreEqual(deck.Count, 15);
+            Assert.IsTrue(deck.GroupBy(x => x).Where(g => g.Count() > 1).Select(y => y.Key).ToList().Count == 0);
+
+            // TODO: Aggiungere pure i test con IsQuestion == true
+
+            List<ObjectId> randomCard = db.Cards.GetRandomCards(false);
+            Assert.IsNotNull(randomCard);
+        }
+        // [TestMethod]
+        public void StoreCards()
+        {
+            int count = 0;
+            while (db.Cards.Create())
+            {
+                count++;
+            }
         }
     }
 }

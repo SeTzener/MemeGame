@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace MemeGame.DB.DTO
 {
-    public class Card
+    public class Card : CardIdentity
     {
-        public ObjectId _id { get; set; }
         public string MemeName { get; set; }
         public bool IsQuestion { get; set; }
         public string Text { get; set; }

@@ -7,9 +7,9 @@ using System.Text;
 
 namespace MemeGame.Entities
 {
-    public class Palyer : IPlayer
+    public class Player : IPlayer
     {
-        public Palyer(PlayerData data)
+        public Player(PlayerData data)
         {
             this.PlayerId = data._id;
             this.NickName = data.Nickname;

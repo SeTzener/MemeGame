@@ -9,15 +9,17 @@ namespace MemeGame.Interfaces
         /// <summary>
         /// Number of cards in meme deck.
         /// </summary>
-        public int MemeDeck { get; set; }
+        public int MemeDeck { get; }
         /// <summary>
         /// Number of cards in question deck.
         /// </summary>
-        public int QuestionDeck { get; set; }
+        public int QuestionDeck { get; }
         /// <summary>
         /// Number of cards in hand.
         /// </summary>
-        public int CardInHand { get; set; }
+        public int CardInHand { get; }
+
+
 
     }
 }

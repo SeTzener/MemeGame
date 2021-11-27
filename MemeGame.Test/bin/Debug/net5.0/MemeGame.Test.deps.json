@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v5.0": {
       "MemeGame.Test/1.0.0": {
         "dependencies": {
+          "MemeGame": "1.0.0",
+          "MemeGame.DB": "1.0.0",
+          "MemeGame.Storage": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "NUnit": "3.13.1",
           "NUnit3TestAdapter": "3.17.0",
@@ -17,7 +20,34 @@
           "MemeGame.Test.dll": {}
         }
       },
+      "AWSSDK.Core/3.7.3.31": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.3.31"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.3.24": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.3.31"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.3.24"
+          }
+        }
+      },
       "coverlet.collector/3.0.2": {},
+      "DnsClient/1.4.0": {
+        "runtime": {
+          "lib/netstandard2.1/DnsClient.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/16.9.4": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -70,7 +100,7 @@
           "Microsoft.TestPlatform.TestHost": "16.9.4"
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.TestPlatform.ObjectModel/16.9.4": {
         "dependencies": {
@@ -321,14 +351,14 @@
       },
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "Microsoft.Win32.Registry/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Collections": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
@@ -338,9 +368,90 @@
           "System.Runtime.InteropServices": "4.3.0"
         }
       },
+      "MongoDB.Bson/2.13.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
+          }
+        }
+      },
+      "MongoDB.Driver/2.13.2": {
+        "dependencies": {
+          "MongoDB.Bson": "2.13.2",
+          "MongoDB.Driver.Core": "2.13.2",
+          "MongoDB.Libmongocrypt": "1.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Driver.dll": {
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
+          }
+        }
+      },
+      "MongoDB.Driver.Core/2.13.2": {
+        "dependencies": {
+          "DnsClient": "1.4.0",
+          "MongoDB.Bson": "2.13.2",
+          "MongoDB.Libmongocrypt": "1.2.2",
+          "SharpCompress": "0.23.0",
+          "System.Buffers": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Driver.Core.dll": {
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/native/libzstd.dll": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/native/snappy32.dll": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "1.1.1.7"
+          },
+          "runtimes/win/native/snappy64.dll": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "1.1.1.7"
+          }
+        }
+      },
+      "MongoDB.Libmongocrypt/1.2.2": {
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/libmongocrypt.so": {
+            "rid": "linux",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/libmongocrypt.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/native/mongocrypt.dll": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0"
+          "Microsoft.NETCore.Platforms": "2.1.2"
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -409,8 +520,19 @@
       },
       "runtime.native.System/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "SharpCompress/0.23.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SharpCompress.dll": {
+            "assemblyVersion": "0.23.0.0",
+            "fileVersion": "0.23.0.0"
+          }
         }
       },
       "System.AppContext/4.1.0": {
@@ -418,9 +540,10 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Buffers/4.5.1": {},
       "System.Collections/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -487,14 +610,14 @@
       },
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Diagnostics.Process/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.Win32.Primitives": "4.3.0",
           "Microsoft.Win32.Registry": "4.3.0",
           "System.Collections": "4.3.0",
@@ -519,7 +642,7 @@
       },
       "System.Diagnostics.Tools/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -545,14 +668,14 @@
       },
       "System.Globalization/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization.Extensions/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "System.Globalization": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -562,7 +685,7 @@
       },
       "System.IO/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
@@ -571,7 +694,7 @@
       },
       "System.IO.FileSystem/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
@@ -627,7 +750,7 @@
       },
       "System.Reflection/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
@@ -660,7 +783,7 @@
       },
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -669,7 +792,7 @@
       "System.Reflection.Metadata/1.6.0": {},
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -682,7 +805,7 @@
       },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.3.0",
           "System.Reflection": "4.3.0",
@@ -691,27 +814,28 @@
       },
       "System.Runtime/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {},
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Handles/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.InteropServices/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
@@ -738,14 +862,20 @@
       },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Text.Encoding.CodePages/4.5.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.1.2",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        }
+      },
       "System.Text.Encoding.Extensions/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
@@ -764,7 +894,7 @@
       },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.1.2",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -868,6 +998,32 @@
             "fileVersion": "4.6.24705.1"
           }
         }
+      },
+      "MemeGame/1.0.0": {
+        "dependencies": {
+          "MemeGame.DB": "1.0.0",
+          "MemeGame.Storage": "1.0.0"
+        },
+        "runtime": {
+          "MemeGame.dll": {}
+        }
+      },
+      "MemeGame.DB/1.0.0": {
+        "dependencies": {
+          "MemeGame.Storage": "1.0.0",
+          "MongoDB.Driver": "2.13.2"
+        },
+        "runtime": {
+          "MemeGame.DB.dll": {}
+        }
+      },
+      "MemeGame.Storage/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.3.24"
+        },
+        "runtime": {
+          "MemeGame.Storage.dll": {}
+        }
       }
     }
   },
@@ -877,12 +1033,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AWSSDK.Core/3.7.3.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PN7l43TFbgQ3vm85ahyy9nliI2wsTwB7CuEU2N3MkYzqvhYXdll5tiX4K97SPfDnOxnqnJK7qCKnoPPH01EfYA==",
+      "path": "awssdk.core/3.7.3.31",
+      "hashPath": "awssdk.core.3.7.3.31.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.3.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6NOj48pU18tbLo5MV1IjtFsTWiKHFRyBgmEg1jdH6D+UmY1c3rrrzhLxSEincsFmOQsMh6VO9161YfFgOABtZA==",
+      "path": "awssdk.s3/3.7.3.24",
+      "hashPath": "awssdk.s3.3.7.3.24.nupkg.sha512"
+    },
     "coverlet.collector/3.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-iBvPAIDaI7j/iMx/DzCGCJ3rdiOmel9VINEfaTiBv/NKIGHOP4X3hqc6Q1wgMtArEshlhXexQknP17SK4vXb1w==",
       "path": "coverlet.collector/3.0.2",
       "hashPath": "coverlet.collector.3.0.2.nupkg.sha512"
+    },
+    "DnsClient/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CO1NG1zQdV0nEAXmr/KppLZ0S1qkaPwV0kPX5YPgmYBtrBVh1XMYHM54IXy3RBJu1k4thFtpzwo4HNHqxiuFYw==",
+      "path": "dnsclient/1.4.0",
+      "hashPath": "dnsclient.1.4.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.9.4": {
       "type": "package",
@@ -912,12 +1089,12 @@
       "path": "microsoft.net.test.sdk/16.9.4",
       "hashPath": "microsoft.net.test.sdk.16.9.4.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
+    "Microsoft.NETCore.Platforms/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+      "sha512": "sha512-mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
+      "path": "microsoft.netcore.platforms/2.1.2",
+      "hashPath": "microsoft.netcore.platforms.2.1.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
@@ -953,6 +1130,34 @@
       "sha512": "sha512-Lw1/VwLH1yxz6SfFEjVRCN0pnflLEsWgnV4qsdJ512/HhTwnKXUG+zDQ4yTO3K/EJQemGoNaBHX5InISNKTzUQ==",
       "path": "microsoft.win32.registry/4.3.0",
       "hashPath": "microsoft.win32.registry.4.3.0.nupkg.sha512"
+    },
+    "MongoDB.Bson/2.13.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qY9271GFCYLA8OB3MdQC8clJh9wnh65gcxUa5Skwh2xYryv21YAHx/VOvv4ILpkb1NhIVgy3LBQhVBldwLaqNg==",
+      "path": "mongodb.bson/2.13.2",
+      "hashPath": "mongodb.bson.2.13.2.nupkg.sha512"
+    },
+    "MongoDB.Driver/2.13.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4+fczDJxxx7HPWY1n75hzHCOZiAhpb1Tjpkvj+c3lAeBGmSCvh5THcadxZ7b97F6OdHxz4xy07mIiwfZlPuQVQ==",
+      "path": "mongodb.driver/2.13.2",
+      "hashPath": "mongodb.driver.2.13.2.nupkg.sha512"
+    },
+    "MongoDB.Driver.Core/2.13.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VY1ayl9yXcZZ0VoXftZD3quHBgdn2EEMmuKlz4V6z2+8grN2svdASwX9E4p0DmOAAX8Wd5B5lYsUifrbo4M5xA==",
+      "path": "mongodb.driver.core/2.13.2",
+      "hashPath": "mongodb.driver.core.2.13.2.nupkg.sha512"
+    },
+    "MongoDB.Libmongocrypt/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pKrlKJk4wem4MyfkaMqj+sqJ+RwUDnqnt76/Xwm5DDjMzEU5QtDkzQOLq5bVwFhNgC8LMn6Hr22tl5WsmN5+AA==",
+      "path": "mongodb.libmongocrypt/1.2.2",
+      "hashPath": "mongodb.libmongocrypt.1.2.2.nupkg.sha512"
     },
     "NETStandard.Library/2.0.0": {
       "type": "package",
@@ -996,12 +1201,26 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
+    "SharpCompress/0.23.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HBbT47JHvNrsZX2dTBzUBOSzBt+EmIRGLIBkbxcP6Jef7DB4eFWQX5iHWV3Nj7hABFPCjISrZ8s0z72nF2zFHQ==",
+      "path": "sharpcompress/0.23.0",
+      "hashPath": "sharpcompress.0.23.0.nupkg.sha512"
+    },
     "System.AppContext/4.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3QjO4jNV7PdKkmQAVp9atA+usVnKRwI3Kx1nMwJ93T0LcQfx7pKAYk0nKz5wn1oP5iqlhZuy6RXOFdhr7rDwow==",
       "path": "system.appcontext/4.1.0",
       "hashPath": "system.appcontext.4.1.0.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -1206,6 +1425,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1247,6 +1473,13 @@
       "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+      "path": "system.text.encoding.codepages/4.5.1",
+      "hashPath": "system.text.encoding.codepages.4.5.1.nupkg.sha512"
     },
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
@@ -1331,6 +1564,21 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "MemeGame/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MemeGame.DB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MemeGame.Storage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

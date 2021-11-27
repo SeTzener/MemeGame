@@ -3,6 +3,7 @@ using MemeGame.Interfaces;
 using MemeGame.Storage;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MemeGame.Entities
@@ -36,7 +37,7 @@ namespace MemeGame.Entities
 
         public List<ICardIdentity> AssembleDeck(int n, bool isQuestion)
         {
-            throw new NotImplementedException();
+            return _data.Cards.GetRandomCards(n, isQuestion).Cast<ICardIdentity>().ToList();
         }
 
         public decimal TimeCount()
