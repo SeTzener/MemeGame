@@ -31,6 +31,7 @@ namespace MemeGame.Storage
             this.Folders.StoredImages = Resources.StoredImagesFolder;
             this.Folders.StoredQuestions = Resources.StoredQuestionsFolder;
         }
+
         public string Bucket { get; set; }
         public StorageDisposition Folders { get; set; }
         private bool _IsTest { get; set; }
@@ -77,7 +78,6 @@ namespace MemeGame.Storage
 
             return null;
         }
-
         public bool MoveToBucket(string keySource, string keyTo, string fileName)
         {
             try
@@ -97,7 +97,6 @@ namespace MemeGame.Storage
                 throw;
             }
         }
-
         public bool DeleteFile(string keySource, string fileName)
         {
             try
@@ -117,7 +116,6 @@ namespace MemeGame.Storage
             }
             return true;
         }
-
         public bool CopyFile(string keySource, string keyTo, string fileName)
         {
             try
@@ -139,7 +137,6 @@ namespace MemeGame.Storage
             }
             return true;
         }
-
         public async Task ListingObjectsAsync(string bucketName)
         {
             try
@@ -175,7 +172,6 @@ namespace MemeGame.Storage
                 Console.WriteLine($"Error encountered on server. Message:'{ex.Message}' getting list of objects.");
             }
         }
-
         public byte[] GetS3Image(string s3Key)
         {
             try

@@ -1,4 +1,5 @@
 ﻿using MemeGame.DB;
+using MemeGame.DTO;
 using MemeGame.Entities;
 using MemeGame.Interfaces;
 using MemeGame.Storage;
@@ -23,11 +24,17 @@ namespace MemeGame.Test
         }
 
         [Test]
-        public void ArrangeDeck()
+        public void DeckTest()
         {
-            List<IPlayer> players = null;
-            IRules rules = new Rules()
-            IBoard board = new Board(players,);
+            List<IPlayer> players = new List<IPlayer>() 
+            { 
+                new Player(new PlayerData(){ })
+            };
+            IRules rules = new Rules(new DTO.RulesData() { CardInHand = 7, MemeDeck = 15, QuestionDeck = 0 });
+            IBoard board = new Board(players, rules, aws, db);
+            
+            
+            Assert.IsTrue(board.MemeDeck.Count == 15);
 
 
         }

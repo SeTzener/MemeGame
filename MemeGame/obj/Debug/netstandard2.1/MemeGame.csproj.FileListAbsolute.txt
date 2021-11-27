@@ -10,6 +10,5 @@ C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1
 C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.AssemblyInfoInputs.cache
 C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.AssemblyInfo.cs
 C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.csproj.CoreCompileInputs.cache
-C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.csproj.CopyComplete
 C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.dll
 C:\Users\Gavizi\Source\Repos\SeTzener\MemeGame\MemeGame\obj\Debug\netstandard2.1\MemeGame.pdb

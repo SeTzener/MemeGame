@@ -27,7 +27,7 @@ namespace MemeGame.Entities
 
         public ObjectId PlayerId { get; private set; }
 
-        public void MakeYourChoice()
+        public void MakeYourChoice(ICardIdentity id)
         {
             throw new NotImplementedException();
         }

@@ -14,6 +14,8 @@ namespace MemeGame.Entities
             this.Id = data._id;
             this.Text = data.Text;
             this.Infos = new CardInfos(data);
+            string imagePath = String.Format("{0}/{1}{2}{3}", data.BucketName, data.S3Key, data.MemeName, data.Extension);
+            GetImageFromStorage(imagePath);
         }
 
         public ICardInfos Infos { get; private set; }

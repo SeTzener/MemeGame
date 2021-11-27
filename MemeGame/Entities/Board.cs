@@ -37,7 +37,7 @@ namespace MemeGame.Entities
 
         public List<ICardIdentity> AssembleDeck(int n, bool isQuestion)
         {
-            return _data.Cards.GetRandomCards(n, isQuestion).Cast<ICardIdentity>().ToList();
+            return _data.Cards.GetRandomCards(n, isQuestion).Select(x => new CardIdentity(x)).Cast<ICardIdentity>().ToList();
         }
 
         public decimal TimeCount()

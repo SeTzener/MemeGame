@@ -15,12 +15,12 @@ namespace MemeGame.Entities
             throw new NotImplementedException();
         }
 
-        public ICardInfos Discard(ObjectId id)
+        public ICardInfos Discard(ICardIdentity id)
         {
             throw new NotImplementedException();
         }
 
-        public ICardInfos Discard(List<ObjectId> ids)
+        public ICardInfos Discard(List<ICardIdentity> ids)
         {
             throw new NotImplementedException();
         }
@@ -35,9 +35,15 @@ namespace MemeGame.Entities
             throw new NotImplementedException();
         }
 
+        public void PassTurn()
+        {
+            throw new NotImplementedException();
+        }
+
         public ICard PlayCard()
         {
             throw new NotImplementedException();
         }
+
     }
 }

@@ -14,7 +14,9 @@ namespace MemeGame.Entities
 
         public Rules(RulesData data)
         {
-
+            this.MemeDeck = data.MemeDeck;
+            this.QuestionDeck = data.QuestionDeck;
+            this.CardInHand = data.CardInHand;
         }
     }
 }

@@ -8,6 +8,12 @@ namespace MemeGame.Entities
 {
     class CardIdentity : ICardIdentity
     {
+        public CardIdentity() { }
+        public CardIdentity(ObjectId id) 
+        {
+            this.Id = id;
+        }
+
         public ObjectId Id { get; set; }
     }
 }

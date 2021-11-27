@@ -11,7 +11,8 @@ namespace MemeGame.Interfaces
         ICard DrawCard(int n);
         ICard DrawCard();
         ICard PlayCard();
-        ICardInfos Discard(ObjectId id);
-        ICardInfos Discard(List<ObjectId> ids);
+        ICardInfos Discard(ICardIdentity id);
+        ICardInfos Discard(List<ICardIdentity> ids);
+        void PassTurn();
     }
 }
