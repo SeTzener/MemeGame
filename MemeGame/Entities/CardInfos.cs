@@ -11,13 +11,13 @@ namespace MemeGame.Entities
         public CardInfos(CardData data)
         {
             this.IsQuestion = data.IsQuestion;
-            this.MemeName = data.MemeName;
+            this.CardName = data.MemeName;
             this.ImageSize = data.ImageSize;
             this.BucketPath = GetBucketPath(data);
         }
         public bool IsQuestion { get; private set; }
 
-        public string MemeName { get; private set; }
+        public string CardName { get; private set; }
 
         public decimal ImageSize { get; private set; }
 

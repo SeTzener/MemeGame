@@ -18,7 +18,14 @@ namespace MemeGame.Interfaces
         /// Number of cards in hand.
         /// </summary>
         public int CardInHand { get; }
-
+        /// <summary>
+        /// Game duration expressed in seconds
+        /// </summary>
+        public int GameDuration { get; set; }
+        /// <summary>
+        /// Turn duration expressed in seconds.
+        /// </summary>
+        public int TurnDuration { get; set; }
 
 
     }

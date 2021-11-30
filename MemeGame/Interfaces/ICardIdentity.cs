@@ -7,6 +7,9 @@ namespace MemeGame.Interfaces
 {
     public interface ICardIdentity
     {
+        /// <summary>
+        /// Id of the card.
+        /// </summary>
         ObjectId Id { get; }
     }
 }

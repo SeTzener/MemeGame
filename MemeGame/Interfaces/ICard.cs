@@ -8,8 +8,17 @@ namespace MemeGame.Interfaces
 {
     public interface ICard : ICardIdentity
     {
+        /// <summary>
+        /// Card informations.
+        /// </summary>
         ICardInfos Infos { get; }
+        /// <summary>
+        /// Card Image.
+        /// </summary>
         byte[] Image { get; }
+        /// <summary>
+        /// Text to overlay on the card.
+        /// </summary>
         string Text { get; }
     }
 }

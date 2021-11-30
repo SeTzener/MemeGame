@@ -10,7 +10,7 @@ namespace MemeGame.Entities
     {
         public List<ICard> Cards { get; private set; }
 
-        public ICardInfos Discard()
+        public ICard PlayCard(ICardIdentity id)
         {
             throw new NotImplementedException();
         }
@@ -39,11 +39,5 @@ namespace MemeGame.Entities
         {
             throw new NotImplementedException();
         }
-
-        public ICard PlayCard()
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

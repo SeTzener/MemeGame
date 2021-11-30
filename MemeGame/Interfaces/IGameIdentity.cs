@@ -6,6 +6,9 @@ namespace MemeGame.Interfaces
 {
     public interface IGameIdentity
     {
+        /// <summary>
+        /// Id of the game.
+        /// </summary>
         int GameId { get; }
     }
 }
