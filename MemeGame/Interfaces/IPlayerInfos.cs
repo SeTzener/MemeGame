@@ -19,9 +19,17 @@ namespace MemeGame.Interfaces
         /// </summary>
         bool IsTurnMaster { get; }
         /// <summary>
+        /// Indicates whether or not the player is online.
+        /// </summary>
+        bool IsOnline { get; }
+        /// <summary>
+        /// Player image.
+        /// </summary>
+        byte[] Avatar { get; }
+        /// <summary>
         /// Number of games this player won per season.
         /// </summary>
-        public Dictionary<int, int> GamesWon { get; set; }
+        public Dictionary<int, int> GamesWon { get; }
 
     }
 }

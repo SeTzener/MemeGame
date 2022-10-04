@@ -21,11 +21,11 @@ namespace MemeGame.Interfaces
         /// <summary>
         /// Game duration expressed in seconds
         /// </summary>
-        public int GameDuration { get; set; }
+        public int GameDuration { get; }
         /// <summary>
         /// Turn duration expressed in seconds.
         /// </summary>
-        public int TurnDuration { get; set; }
+        public int TurnDuration { get; }
 
 
     }
