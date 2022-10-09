@@ -17,7 +17,7 @@ namespace MemeGame.Entities
             _data = db;
             _storage = storage;
             this.Players = players;
-            this.MemeDeck = AssembleDeck(rules.MemeDeck, false);
+            this.MemeDeck = AssembleDeck(rules.Deck, false);
             this.QuestionDeck = AssembleDeck(rules.QuestionDeck , true);
             this.DiscardPile = new List<ICardIdentity>();
         }

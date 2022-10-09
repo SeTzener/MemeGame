@@ -8,7 +8,7 @@ namespace MemeGame.Entities
 {
     public class Rules : IRules
     {
-        public int MemeDeck { get; private set; }
+        public int Deck { get; private set; }
         public int QuestionDeck { get; private set; }
         public int CardInHand { get; private set; }
         public int GameDuration { get; private set; }
@@ -16,7 +16,7 @@ namespace MemeGame.Entities
 
         public Rules(RulesData data)
         {
-            this.MemeDeck = data.MemeDeck;
+            this.Deck = data.MemeDeck;
             this.QuestionDeck = data.QuestionDeck;
             this.CardInHand = data.CardInHand;
         }

@@ -9,7 +9,7 @@ namespace MemeGame.Interfaces
         /// <summary>
         /// Number of cards in meme deck.
         /// </summary>
-        public int MemeDeck { get; }
+        public int Deck { get; }
         /// <summary>
         /// Number of cards in question deck.
         /// </summary>
